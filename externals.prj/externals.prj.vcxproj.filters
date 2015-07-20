@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="bullet">
+      <UniqueIdentifier>{644c1283-1cd9-4ff8-a025-efc571f5b66f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\bullet\config.bat">
+      <Filter>bullet</Filter>
+    </None>
+    <None Include="..\bullet\build.bat">
+      <Filter>bullet</Filter>
+    </None>
+    <None Include="..\bullet\install.bat">
+      <Filter>bullet</Filter>
+    </None>
+    <None Include="..\bullet\package.bat">
+      <Filter>bullet</Filter>
+    </None>
+  </ItemGroup>
+</Project>
