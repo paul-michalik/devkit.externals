@@ -4,6 +4,9 @@
     <Filter Include="bullet">
       <UniqueIdentifier>{644c1283-1cd9-4ff8-a025-efc571f5b66f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="_common">
+      <UniqueIdentifier>{ead2a1e5-b5f4-43e9-a446-a1ea3c1f41fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\bullet\config.bat">
