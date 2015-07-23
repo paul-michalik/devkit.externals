@@ -1,7 +1,0 @@
-[submodule "bullet/bullet-2.83.5-src"]
-	path = bullet/bullet-2.83.5-src
-	url = https://github.com/paul-michalik/bullet3.git
-	branch = Branch_2.83.5
-[submodule "bullet-mod"]
-	path = bullet-mod
-	url = https://github.com/paul-michalik/externals.bullet.git
