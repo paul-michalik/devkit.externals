@@ -18,5 +18,11 @@
     <None Include="..\.gitmodules">
       <Filter>.git</Filter>
     </None>
+    <None Include="..\common\config.bat">
+      <Filter>.common</Filter>
+    </None>
+    <None Include="..\common\package_cmake_generator.bat">
+      <Filter>.common</Filter>
+    </None>
   </ItemGroup>
 </Project>
