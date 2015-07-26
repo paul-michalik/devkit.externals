@@ -2,9 +2,11 @@
 
 call config.bat %*
 
+if %errorlevel% neq 0 exit /b %errorlevel%
+
 setlocal
 
-call "%Package_RootDir%\..\common\package_cmake_generator.bat" %*
+call "%Package_RootDir%\..\common\cmake_generator.bat" %*
 
 rem =========================
 rem Bullet specific options
@@ -39,27 +41,19 @@ rem =========================
 
 if exist "%Package_BuildDir%" (
     if /i "%Package_CleanBuild%"=="Yes" (
+        echo Performing clean build, removing %Package_BuildDir%
         del /s /q "%Package_BuildDir%"
         rd /s /q "%Package_BuildDir%"
+        if %errorlevel% neq 0 exit /b %errorlevel%
     )
 )
 
-if not exist "%Package_BuildDir%" md "%Package_BuildDir%"
-
-cd "%Package_BuildDir%"
-
-rem =========================
-rem Create build-log dir
-rem =========================
-
-if exist "%Package_BuildLogDir%" (
-    if /i "%Package_CleanBuild%"=="Yes" (
-        del /s /q "%Package_BuildLogDir%"
-        rd /s /q "%Package_BuildLogDir%"
-    )
+if not exist "%Package_BuildPrjDir%" (
+    echo Creating "%Package_BuildPrjDir%"...
+    md "%Package_BuildPrjDir%"
 )
 
-if not exist "%Package_BuildLogDir%" md "%Package_BuildLogDir%"
+cd "%Package_BuildPrjDir%"
 
 rem ===========
 rem Run CMake
@@ -67,21 +61,35 @@ rem ===========
 
 "%Package_CMakeExe%" %Package_CMake_CmdLine% "%Package_SrcDir%"
 
-rem ===========
-rem Create setting dependent path prefix 
-rem ===========
+rem =========================
+rem Create build-log dir
+rem =========================
+
+if exist "%Package_BuildLogDir%" (
+    if /i "%Package_CleanBuild%"=="Yes" (
+        echo Performing clean build, removing %Package_BuildLogDir%
+        del /s /q "%Package_BuildLogDir%"
+        rd /s /q "%Package_BuildLogDir%"
+        if %errorlevel% neq 0 exit /b %errorlevel%
+    )
+)
+
+if not exist "%Package_BuildLogDir%" (
+    echo Creating "%Package_BuildLogDir%"...
+    md "%Package_BuildLogDir%"
+)
 
 rem ===========
 rem Run MSBuild for Debug and Release configurations
 rem ===========
 
 set "Package_Config=Debug"
-"%Package_MSBuildExe%" /m /noconsolelogger /v:diagnostic /t:Build /l:FileLogger,Microsoft.Build.Engine;logfile="%Package_BuildLogDir%\%Package_Config%.log.txt" /p:Configuration="%Package_Config%" "%Package_BuildProject%"
+"%Package_MSBuildExe%" /m /noconsolelogger /v:diagnostic /t:Build /l:FileLogger,Microsoft.Build.Engine;logfile="%Package_BuildLogDir%.%Package_Config%.log.txt" /p:Configuration="%Package_Config%" "%Package_BuildProject%"
 
 dir /b "%Package_BuildLibDir%\%Package_Config%\*.lib" > "%Package_BuildLogDir%\%Package_Config%.targets.txt"
 
 set "Package_Config=Release"
-"%Package_MSBuildExe%" /m /noconsolelogger /v:diagnostic /t:Build /l:FileLogger,Microsoft.Build.Engine;logfile="%Package_BuildLogDir%\%Package_Config%.log.txt" /p:Configuration="%Package_Config%" "%Package_BuildProject%"
+"%Package_MSBuildExe%" /m /noconsolelogger /v:diagnostic /t:Build /l:FileLogger,Microsoft.Build.Engine;logfile="%Package_BuildLogDir%.%Package_Config%.log.txt" /p:Configuration="%Package_Config%" "%Package_BuildProject%"
 
 dir /b "%Package_BuildLibDir%\%Package_Config%\*.lib" > "%Package_BuildLogDir%\%Package_Config%.targets.txt"
 

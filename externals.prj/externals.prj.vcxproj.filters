@@ -24,9 +24,6 @@
     <None Include="..\common\config.bat">
       <Filter>.common</Filter>
     </None>
-    <None Include="..\common\package_cmake_generator.bat">
-      <Filter>.common</Filter>
-    </None>
     <None Include="..\bullet\build.bat">
       <Filter>bullet</Filter>
     </None>
@@ -38,6 +35,9 @@
     </None>
     <None Include="..\bullet\package.bat">
       <Filter>bullet</Filter>
+    </None>
+    <None Include="..\common\cmake_generator.bat">
+      <Filter>.common</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
