@@ -74,6 +74,9 @@
     <None Include="..\common\config.bat" />
     <None Include="..\common\package_cmake_generator.bat" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\bullet\Readme.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

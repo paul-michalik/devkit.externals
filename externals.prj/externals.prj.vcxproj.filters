@@ -40,4 +40,9 @@
       <Filter>bullet</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\bullet\Readme.txt">
+      <Filter>bullet</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
