@@ -67,6 +67,10 @@
     <None Include="..\.gitattributes" />
     <None Include="..\.gitignore" />
     <None Include="..\.gitmodules" />
+    <None Include="..\bullet\build.bat" />
+    <None Include="..\bullet\config.bat" />
+    <None Include="..\bullet\install.bat" />
+    <None Include="..\bullet\package.bat" />
     <None Include="..\common\config.bat" />
     <None Include="..\common\package_cmake_generator.bat" />
   </ItemGroup>
