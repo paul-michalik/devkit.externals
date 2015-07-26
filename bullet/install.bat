@@ -11,8 +11,7 @@ rem Copy artifacts of use from Package_BuildDir, Package_SrcDir into Package_Out
 rem ============
 
 set "Package_SrcOutDir=%Package_OutDir%\src"
-set "Package_LibOutDir=%Package_OutDir%\lib"
-set "Package_BinOutDir=%Package_OutDir%\bin"
+set "Package_BinOutDir=%Package_OutDir%\targets"
 
 set "Package_SrcItemPattern=*.h *.hpp *.c *.cpp *.inl"
 set "Package_LibItemPattern=*.lib *.pdb"
@@ -30,8 +29,6 @@ rem ============
 rem Binary items
 rem ============
 
-robocopy "%Package_BuildDir%" "%Package_LibOutDir%" %Package_LibItemPattern% /purge /s /xj /xd "%Package_ExcludeDirsPattern%" /xf "%Package_ExcludeFilePattern%"
-
-robocopy "%Package_BuildDir%" "%Package_BinOutDir%" %Package_BinItemPattern% /purge /s /xj /xd "%Package_ExcludeDirsPattern%" /xf "%Package_ExcludeFilePattern%"
+robocopy "%Package_BuildDir%" "%Package_BinOutDir%" %Package_LibItemPattern% %Package_BinItemPattern% /purge /s /xj /xd "%Package_ExcludeDirsPattern%" /xf "%Package_ExcludeFilePattern%"
 
 endlocal
