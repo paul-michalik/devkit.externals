@@ -84,12 +84,12 @@ rem Run MSBuild for Debug and Release configurations
 rem ===========
 
 set "Package_Config=Debug"
-"%Package_MSBuildExe%" /m /noconsolelogger /v:diagnostic /t:Build /l:FileLogger,Microsoft.Build.Engine;logfile="%Package_BuildLogDir%.%Package_Config%.log.txt" /p:Configuration="%Package_Config%" "%Package_BuildProject%"
+"%Package_MSBuildExe%" /m /noconsolelogger /v:diagnostic /t:Build /l:FileLogger,Microsoft.Build.Engine;logfile="%Package_BuildLogDir%\%Package_Config%.log.txt" /p:Configuration="%Package_Config%" "%Package_BuildProject%"
 
 dir /b "%Package_BuildLibDir%\%Package_Config%\*.lib" > "%Package_BuildLogDir%\%Package_Config%.targets.txt"
 
 set "Package_Config=Release"
-"%Package_MSBuildExe%" /m /noconsolelogger /v:diagnostic /t:Build /l:FileLogger,Microsoft.Build.Engine;logfile="%Package_BuildLogDir%.%Package_Config%.log.txt" /p:Configuration="%Package_Config%" "%Package_BuildProject%"
+"%Package_MSBuildExe%" /m /noconsolelogger /v:diagnostic /t:Build /l:FileLogger,Microsoft.Build.Engine;logfile="%Package_BuildLogDir%\%Package_Config%.log.txt" /p:Configuration="%Package_Config%" "%Package_BuildProject%"
 
 dir /b "%Package_BuildLibDir%\%Package_Config%\*.lib" > "%Package_BuildLogDir%\%Package_Config%.targets.txt"
 

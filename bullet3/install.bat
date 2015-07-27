@@ -29,6 +29,6 @@ rem ============
 rem Binary items
 rem ============
 
-robocopy "%Package_BuildDir%" "%Package_BinOutDir%" %Package_LibItemPattern% %Package_BinItemPattern% /purge /s /xj /xd "%Package_ExcludeDirsPattern%" /xf "%Package_ExcludeFilePattern%"
+robocopy "%Package_BuildDir%" "%Package_BinOutDir%" %Package_LibItemPattern% %Package_BinItemPattern% /s /xj /xd "%Package_ExcludeDirsPattern%" /xf "%Package_ExcludeFilePattern%"
 
 endlocal

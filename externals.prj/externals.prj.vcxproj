@@ -69,6 +69,7 @@
     <None Include="..\.gitmodules" />
     <None Include="..\bullet3\build.bat" />
     <None Include="..\bullet3\config.bat" />
+    <None Include="..\bullet3\deploy.bat" />
     <None Include="..\bullet3\install.bat" />
     <None Include="..\bullet3\package.bat" />
     <None Include="..\common\config.bat" />
