@@ -7,7 +7,7 @@
     <Filter Include=".common">
       <UniqueIdentifier>{ead2a1e5-b5f4-43e9-a446-a1ea3c1f41fa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="bullet">
+    <Filter Include="bullet3">
       <UniqueIdentifier>{7a15ea02-bd43-4234-ad53-76abb84ea334}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -24,25 +24,25 @@
     <None Include="..\common\config.bat">
       <Filter>.common</Filter>
     </None>
-    <None Include="..\bullet\build.bat">
-      <Filter>bullet</Filter>
-    </None>
-    <None Include="..\bullet\config.bat">
-      <Filter>bullet</Filter>
-    </None>
-    <None Include="..\bullet\install.bat">
-      <Filter>bullet</Filter>
-    </None>
-    <None Include="..\bullet\package.bat">
-      <Filter>bullet</Filter>
-    </None>
     <None Include="..\common\cmake_generator.bat">
       <Filter>.common</Filter>
     </None>
+    <None Include="..\bullet3\build.bat">
+      <Filter>bullet3</Filter>
+    </None>
+    <None Include="..\bullet3\config.bat">
+      <Filter>bullet3</Filter>
+    </None>
+    <None Include="..\bullet3\install.bat">
+      <Filter>bullet3</Filter>
+    </None>
+    <None Include="..\bullet3\package.bat">
+      <Filter>bullet3</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\bullet\Readme.txt">
-      <Filter>bullet</Filter>
+    <Text Include="..\bullet3\Readme.txt">
+      <Filter>bullet3</Filter>
     </Text>
   </ItemGroup>
 </Project>
