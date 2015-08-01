@@ -10,6 +10,12 @@
     <Filter Include="bullet3">
       <UniqueIdentifier>{7a15ea02-bd43-4234-ad53-76abb84ea334}</UniqueIdentifier>
     </Filter>
+    <Filter Include="mstest_utils">
+      <UniqueIdentifier>{83bd027c-85d8-4408-9112-04463d835657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mstest_utils\mstest-utils-0.1-src">
+      <UniqueIdentifier>{51458a82-43b4-4f24-8e14-1ab84eb04320}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitattributes">
@@ -42,10 +48,33 @@
     <None Include="..\bullet3\deploy.bat">
       <Filter>bullet3</Filter>
     </None>
+    <None Include="..\mstest_utils\build.bat">
+      <Filter>mstest_utils</Filter>
+    </None>
+    <None Include="..\mstest_utils\deploy.bat">
+      <Filter>mstest_utils</Filter>
+    </None>
+    <None Include="..\mstest_utils\install.bat">
+      <Filter>mstest_utils</Filter>
+    </None>
+    <None Include="..\mstest_utils\package.bat">
+      <Filter>mstest_utils</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\bullet3\Readme.txt">
       <Filter>bullet3</Filter>
     </Text>
+    <Text Include="..\mstest_utils\config.bat">
+      <Filter>mstest_utils</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\crt_mem_check.h">
+      <Filter>mstest_utils\mstest-utils-0.1-src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\log_message.h">
+      <Filter>mstest_utils\mstest-utils-0.1-src</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

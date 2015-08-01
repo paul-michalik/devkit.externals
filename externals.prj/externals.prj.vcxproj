@@ -74,9 +74,18 @@
     <None Include="..\bullet3\package.bat" />
     <None Include="..\common\config.bat" />
     <None Include="..\common\cmake_generator.bat" />
+    <None Include="..\mstest_utils\build.bat" />
+    <None Include="..\mstest_utils\deploy.bat" />
+    <None Include="..\mstest_utils\install.bat" />
+    <None Include="..\mstest_utils\package.bat" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\bullet3\Readme.txt" />
+    <Text Include="..\mstest_utils\config.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\crt_mem_check.h" />
+    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\log_message.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
