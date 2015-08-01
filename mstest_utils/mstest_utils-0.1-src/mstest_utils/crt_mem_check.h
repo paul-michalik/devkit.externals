@@ -69,8 +69,8 @@ namespace mstest_util {
         }
     };
 
-#define MSTEST_UTILS_SCOPED_MEM_CHECK() ::tests::scoped_crt_mem_check t_crt_mem_check__
-#define MSTEST_UTILS_TRACKED_MEM_CHECK() ::tests::tracked_crt_mem_check m_crt_mem_check__
+#define MSTEST_UTILS_SCOPED_MEM_CHECK() ::mstest_utils::scoped_crt_mem_check t_crt_mem_check__
+#define MSTEST_UTILS_TRACKED_MEM_CHECK() ::mstest_utils::tracked_crt_mem_check m_crt_mem_check__
 #define MSTEST_UTILS_TRACKED_MEM_CHECK_START() this->m_crt_mem_check__.start()
 #define MSTEST_UTILS_TRACKED_MEM_CHECK_FINISH() this->m_crt_mem_check__.finish()
 
