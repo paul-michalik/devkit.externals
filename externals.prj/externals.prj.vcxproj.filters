@@ -70,10 +70,10 @@
     </Text>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\crt_mem_check.h">
+    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\mstest_utils\crt_mem_check.h">
       <Filter>mstest_utils\mstest-utils-0.1-src</Filter>
     </ClInclude>
-    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\log_message.h">
+    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\mstest_utils\log_message.h">
       <Filter>mstest_utils\mstest-utils-0.1-src</Filter>
     </ClInclude>
   </ItemGroup>

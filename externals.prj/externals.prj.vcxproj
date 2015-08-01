@@ -84,8 +84,8 @@
     <Text Include="..\mstest_utils\config.bat" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\crt_mem_check.h" />
-    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\log_message.h" />
+    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\mstest_utils\crt_mem_check.h" />
+    <ClInclude Include="..\mstest_utils\mstest_utils-0.1-src\mstest_utils\log_message.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
