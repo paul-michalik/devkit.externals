@@ -1,7 +1,7 @@
 #pragma once
 #include <sstream>
 
-namespace tests {
+namespace mstest_utils {
 
     template<class TChar>
     class basic_log_message {

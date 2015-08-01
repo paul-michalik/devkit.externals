@@ -2,7 +2,7 @@
 #include <crtdbg.h>
 #include <CppUnitTest.h>
 
-namespace mstest_util {
+namespace mstest_utils {
 #ifdef _DEBUG
 
     struct mem_check_base {
