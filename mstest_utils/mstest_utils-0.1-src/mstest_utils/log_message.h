@@ -23,7 +23,9 @@ namespace mstest_utils {
     namespace {
 
         struct as_string_ {};
+        struct as_endl_ {};
         static const as_string_ as_string;
+        static const as_endl_ endl;
 
         namespace detail {
             template<class TChar>
@@ -42,12 +44,30 @@ namespace mstest_utils {
         }
 
         template<class TChar>
-        detail::basic_string_proxy<TChar> operator | (std::basic_ostream<TChar>& p_out, as_string_ const &)
+        detail::basic_string_proxy<TChar> operator | (std::basic_ostream<TChar>& p_out, 
+            as_string_ const &)
         {
             return dynamic_cast<std::basic_stringstream<TChar>&>(p_out).str();
+        }
+
+        template<class TChar>
+        detail::basic_string_proxy<TChar> operator << (std::basic_ostream<TChar>& p_out,
+            as_string_ const &)
+        {
+            return dynamic_cast<std::basic_stringstream<TChar>&>(p_out).str();
+        }
+
+        template<class TChar>
+        detail::basic_string_proxy<TChar> operator << (std::basic_ostream<TChar>& p_out,
+            as_endl_ const &)
+        {
+            return dynamic_cast<std::basic_stringstream<TChar>&>(p_out << std::endl).str();
         }
     }
 
     typedef basic_log_message<char> log_message;
     typedef basic_log_message<wchar_t> wlog_message;
 }
+
+using mstest_utils::as_string;
+using mstest_utils::endl;
