@@ -19,9 +19,10 @@ rem CXX and C compiler flags
 rem Changes: 
 rem 1. pdb deployed along with libs
 rem 2. create debug info for Release configuration 
+rem 3. switch off profiling
 rem =========================
 
-set "Package_CMake_CmdLine=%Package_CMake_CmdLine% -DCMAKE_CXX_FLAGS:STRING="/DWIN32 /D_WINDOWS /W3 /GR /EHsc /Fd"%Package_BuildLibDir%\$(Configuration)\$(ProjectName).pdb"""
+set "Package_CMake_CmdLine=%Package_CMake_CmdLine% -DCMAKE_CXX_FLAGS:STRING="/DWIN32 /D_WINDOWS /W3 /GR /EHsc /DBT_NO_PROFILE /Fd"%Package_BuildLibDir%\$(Configuration)\$(TargetName).pdb"""
 set "Package_CMake_CmdLine=%Package_CMake_CmdLine% -DCMAKE_CXX_FLAGS_RELEASE:STRING="/MD /Zi /O2 /Ob2 /D NDEBUG"%"
 set "Package_CMake_CmdLine=%Package_CMake_CmdLine% -DCMAKE_C_FLAGS_RELEASE:STRING="/MD /Zi /O2 /Ob2 /D NDEBUG"%"
 
