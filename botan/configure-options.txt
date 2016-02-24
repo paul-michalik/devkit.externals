@@ -1,0 +1,53 @@
+Usage: configure.py [options]
+
+Options:
+  --version                          show program's version number and exit
+  -h, --help                         show this help message and exit
+  --verbose                          Show debug messages
+  --quiet                            Show only warnings and errors
+
+  Target options:
+    --cpu=CPU                        set the target processor type/model
+    --os=OS                          set the target operating system
+    --cc=COMPILER                    set the desired build compiler
+    --cc-bin=BINARY                  set the name of the compiler binary
+    --with-endian=ORDER              override guess of CPU byte order
+    --with-unaligned-mem             enable unaligned memory accesses
+    --enable-sse2                    enable use of SSE2
+    --enable-ssse3                   enable use of SSSE3
+    --enable-altivec                 enable use of AltiVec
+    --enable-aes-ni                  enable use of AES-NI
+    --enable-movbe                   enable use of movbe
+
+  Build options:
+    --disable-shared                 disable building a shared library
+    --disable-asm                    disallow use of assembler
+    --enable-debug                   enable debug build
+    --gen-amalgamation               generate amalgamation files
+    --via-amalgamation               build via amalgamation
+    --with-tr1-implementation=WHICH  enable TR1 (choices: none, system, boost)
+    --with-build-dir=DIR             setup the build in DIR
+    --makefile-style=STYLE           choose a makefile style (unix or nmake)
+    --with-local-config=FILE         include the contents of FILE into build.h
+    --distribution-info=STRING       set distribution specific versioning
+    --with-sphinx                    Use Sphinx to generate HTML manual
+    --with-doxygen                   Use Doxygen to generate HTML API docs
+
+  Module selection:
+    --enable-modules=MODS            enable specific modules
+    --disable-modules=MODS           disable specific modules
+    --no-autoload                    disable automatic loading
+    --with-openssl                   add support for using OpenSSL
+    --with-gnump                     add support for using GNU MP
+    --with-bzip2                     add support for using Bzip2
+    --with-zlib                      add support for using Zlib
+
+  Wrapper options:
+    --with-boost-python              enable Boost.Python wrapper
+    --with-python-version=N.M        specify Python to build against (eg 2.7)
+
+  Installation options:
+    --prefix=DIR                     set the base install directory
+    --docdir=DIR                     set the documentation install directory
+    --libdir=DIR                     set the library install directory
+    --includedir=DIR                 set the include file install directory

@@ -16,6 +16,9 @@
     <Filter Include="mstest_utils\mstest-utils-0.1-src">
       <UniqueIdentifier>{51458a82-43b4-4f24-8e14-1ab84eb04320}</UniqueIdentifier>
     </Filter>
+    <Filter Include="botan">
+      <UniqueIdentifier>{187ec8eb-c735-4f52-b9cb-635efaf9aba5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitattributes">
@@ -60,6 +63,21 @@
     <None Include="..\mstest_utils\package.bat">
       <Filter>mstest_utils</Filter>
     </None>
+    <None Include="..\botan\build.bat">
+      <Filter>botan</Filter>
+    </None>
+    <None Include="..\botan\config.bat">
+      <Filter>botan</Filter>
+    </None>
+    <None Include="..\botan\deploy.bat">
+      <Filter>botan</Filter>
+    </None>
+    <None Include="..\botan\install.bat">
+      <Filter>botan</Filter>
+    </None>
+    <None Include="..\botan\package.bat">
+      <Filter>botan</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\bullet3\Readme.txt">
@@ -67,6 +85,12 @@
     </Text>
     <Text Include="..\mstest_utils\config.bat">
       <Filter>mstest_utils</Filter>
+    </Text>
+    <Text Include="..\botan\Readme.txt">
+      <Filter>botan</Filter>
+    </Text>
+    <Text Include="..\botan\configure-options.txt">
+      <Filter>botan</Filter>
     </Text>
   </ItemGroup>
   <ItemGroup>
