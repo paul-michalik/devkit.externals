@@ -84,6 +84,7 @@
     <None Include="..\mstest_utils\deploy.bat" />
     <None Include="..\mstest_utils\install.bat" />
     <None Include="..\mstest_utils\package.bat" />
+    <None Include="FindBotan.cmake" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\botan\configure-options.txt" />

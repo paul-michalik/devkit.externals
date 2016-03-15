@@ -81,6 +81,9 @@
     <None Include="..\common\get_cmake_generator.bat">
       <Filter>.common</Filter>
     </None>
+    <None Include="FindBotan.cmake">
+      <Filter>botan</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\bullet3\Readme.txt">
