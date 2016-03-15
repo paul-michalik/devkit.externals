@@ -33,9 +33,6 @@
     <None Include="..\common\config.bat">
       <Filter>.common</Filter>
     </None>
-    <None Include="..\common\cmake_generator.bat">
-      <Filter>.common</Filter>
-    </None>
     <None Include="..\bullet3\build.bat">
       <Filter>bullet3</Filter>
     </None>
@@ -77,6 +74,12 @@
     </None>
     <None Include="..\botan\package.bat">
       <Filter>botan</Filter>
+    </None>
+    <None Include="..\common\locate_vcvarsall.bat">
+      <Filter>.common</Filter>
+    </None>
+    <None Include="..\common\get_cmake_generator.bat">
+      <Filter>.common</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

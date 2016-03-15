@@ -6,7 +6,7 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 
 setlocal
 
-call "%Package_RootDir%\..\common\cmake_generator.bat" %*
+call "%Package_RootDir%\..\common\get_cmake_generator.bat" %*
 
 rem =========================
 rem Bullet specific options
