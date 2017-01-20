@@ -13,7 +13,7 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 
 set "Package_Name=bullet3"
 set "Package_Version=2.83.6"
-set "Package_PathPrefix=%Package_RootDir%\%Package_Name%-%Package_Version%"
+set "Package_PathPrefix=%Package_RootDir%\src\%Package_Name%\%Package_Name%-%Package_Version%"
 set "Package_PlatformToolsetName=%Package_Platform%.%Package_Toolset%"
 set "Package_PlatformToolsetPath=%Package_Platform%\%Package_Toolset%"
 set "Package_SrcDir=%Package_PathPrefix%-src"
