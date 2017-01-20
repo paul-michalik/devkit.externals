@@ -80,6 +80,7 @@
     <None Include="..\common\config.bat" />
     <None Include="..\common\get_cmake_generator.bat" />
     <None Include="..\common\locate_vcvarsall.bat" />
+    <None Include="..\mrpt\config.bat" />
     <None Include="..\mstest_utils\build.bat" />
     <None Include="..\mstest_utils\deploy.bat" />
     <None Include="..\mstest_utils\install.bat" />

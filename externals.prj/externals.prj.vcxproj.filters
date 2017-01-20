@@ -19,6 +19,9 @@
     <Filter Include="botan">
       <UniqueIdentifier>{187ec8eb-c735-4f52-b9cb-635efaf9aba5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="mrpt">
+      <UniqueIdentifier>{6fe16ab5-e407-4e7a-be01-1d5b67ed0f09}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.gitattributes">
@@ -83,6 +86,9 @@
     </None>
     <None Include="FindBotan.cmake">
       <Filter>botan</Filter>
+    </None>
+    <None Include="..\mrpt\config.bat">
+      <Filter>mrpt</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
